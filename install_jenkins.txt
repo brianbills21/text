@@ -1,0 +1,39 @@
+sudo yum -y install epel-release
+yum update -y
+reboot
+clear
+yum install -y java-1.8.0-openjdk.x86_64
+java -version
+cp /etc/profile /etc/profile_backup
+echo 'export JAVA_HOME=/usr/lib/jvm/jre-1.8.0-openjdk' | sudo tee -a /etc/profile
+echo 'export JRE_HOME=/usr/lib/jvm/jre' | sudo tee -a /etc/profile
+source /etc/profile
+echo $JAVA_HOME
+echo $JRE_HOME
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo rpm --import http://pkg.jenkins-ci.org/redhat-stable/jenkins-ci.org.key
+sudo yum install -y jenkins
+sudo systemctl start jenkins.service
+clear
+sudo systemctl enable jenkins.service
+sudo yum install -y nginx
+sudo vi /etc/nginx/nginx.conf
+change this:
+location / {
+}
+to:
+location / {
+	proxy_pass http://127.0.0.1:8080;
+	proxy_redirect off;
+	proxy_set_header Host $host;
+	proxy_set_header X-Real-IP $remote_addr;
+	proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	proxy_set_header X-Forwarded-Proto $scheme;
+}
+sudo systemctl start nginx.service
+sudo systemctl enable nginx.service
+cat /var/lib/jenkins/secrets/initialAdminPassword
+copy the string
+go to http://192.168.134.142
+paste in the string and click next
+add account and choose defaults

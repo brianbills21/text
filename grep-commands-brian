@@ -1,0 +1,79 @@
+  206  2016-07-12 10:36:11 grep -xvFf cylance.txt compucom.txt > add-agent.txt
+  230  2016-07-12 10:49:07 grep -xvFf cylance.txt compucom.txt > add-agent.txt
+  238  2016-07-12 10:53:23 diff compucom.txt cylance.txt | grep -Po "^> \K.*" | wc -l
+  239  2016-07-12 10:54:11 grep -xvFf cylance.txt compucom.txt > add-agent.txt
+  272  2016-07-12 11:47:50 grep MININT-NAVHKIN cylance.txt 
+  273  2016-07-12 11:48:31 grep L51136 cylance.txt 
+  274  2016-07-12 11:48:45 grep L51136804 cylance.txt 
+  287  2016-07-12 11:55:21 history | grep "grep"
+  288  2016-07-12 11:55:32 grep -xvFf cylance.txt compucom.txt > add-agent.txt
+  291  2016-07-12 13:44:49 grep -xvFf compucom.txt cylance.txt > add-agent2.txt
+  305  2016-07-12 13:49:04 history | grep "grep"
+  306  2016-07-12 13:49:24 grep -xvFf cylance.tx total-list.txt > add-agent.txt
+  307  2016-07-12 13:49:36 grep -xvFf cylance.txt total-list.txt > add-agent.txt
+  309  2016-07-12 13:51:04 grep -xvFf cylance.txt compucom.txt > add-agent2.txt
+  319  2016-07-12 14:00:05 cat add-agent.txt | grep "^T"
+  320  2016-07-12 14:01:48 cat add-agent.txt | grep "^T" > add-agent-T.`date +"%m%d%Y"`.txt
+  329  2016-07-12 14:04:02 cat add-agent.txt | grep "^M" > add-agent-M.`date +"%m%d%y"`.txt
+  330  2016-07-12 14:04:23 cat add-agent.txt | grep "^D" > add-agent-D.`date +"%m%d%y"`.txt
+  331  2016-07-12 14:04:36 cat add-agent.txt | grep "^L" > add-agent-L.`date +"%m%d%y"`.txt
+  335  2016-07-12 14:05:50 cat add-agent.txt | grep "^B" > add-agent-B.`date +"%m%d%y"`.txt
+  336  2016-07-12 14:06:08 cat add-agent.txt | grep "^C" > add-agent-C.`date +"%m%d%y"`.txt
+  345  2016-07-12 14:09:25 history | grep date
+  355  2016-07-12 14:27:31 history | grep "grep"
+  356  2016-07-12 14:28:15 grep -xvFf cylance.txt compucom.txt > notincylance.txt
+  357  2016-07-12 14:28:54 grep -xvFf compucon.txt cylance.txt > notincompucom.txt
+  358  2016-07-12 14:29:02 grep -xvFf compucom.txt cylance.txt > notincompucom.txt
+  365  2016-07-12 14:32:18 history | grep "grep -"
+  401  2016-07-12 14:46:22 grep DATACON add-agent-D.071216.txt > add-agent-DATACON.`date +m%d%y`.txt
+  402  2016-07-12 14:46:50 grep DATACON add-agent-D.071216.txt > add-agent-DATACON.`date +%m%d%y`.txt
+  408  2016-07-12 14:47:53 grep "^V" notincylance.txt
+  409  2016-07-12 14:47:59 grep "^v" notincylance.txt
+  424  2016-07-12 14:58:27 grep -E DATACON add-agent-D.071216.txt
+  425  2016-07-12 14:58:37 grep -vE DATACON add-agent-D.071216.txt
+  426  2016-07-12 14:58:53 grep -E DATACON add-agent-D.071216.txt
+  427  2016-07-12 15:03:33 grep -v "DATACON" add-agent-D.071216.txt > temp; mv temp add-agent-D.071216.txt 
+  430  2016-07-12 15:03:52 grep DATACON add-agent-DATACON.071216.txt
+  431  2016-07-12 15:04:11 grep DATACON add-agent-D.071216.txt
+  438  2016-07-12 15:11:30 -grep Mac add-agent-M.071216.txt
+  439  2016-07-12 15:11:41 grep Mac add-agent-M.071216.txt
+  440  2016-07-12 15:11:53 grep mac add-agent-M.071216.txt
+  441  2016-07-12 15:12:11 grep - *
+  443  2016-07-12 15:12:34 grep - add-agent*
+  444  2016-07-12 15:13:53 grep " " add-agent*
+  459  2016-07-12 15:20:06 grep PC add-agent*
+  465  2016-07-12 15:21:38 history | grep echo
+  467  2016-07-12 15:22:10 history | grep *
+  468  2016-07-12 15:22:40 history | grep add-agent*
+  469  2016-07-12 15:22:54 history | grep add-agent
+  471  2016-07-12 15:23:41 vi grep - add-agent*
+  472  2016-07-12 15:23:45   447  2016-07-12 15:13:53 grep " " add-agent*clear
+  503  2016-07-12 15:58:38 grep "^T" notincylance.txt > add-agent-T.071216.txt
+  507  2016-07-12 16:00:41 hidtory | grep paste
+  508  2016-07-12 16:00:50 history | grep paste
+  517  2016-07-12 16:05:20 history | grep "echo"
+  598  2016-07-15 11:45:24 tail -n "+$(grep -n 'Approved By:' approval.txt | head -n 1 | cut -d ":" -f 1)"
+  599  2016-07-15 11:46:44 tail -n "+$(($(grep -n 'Approved By:' approval.txt | head -n 1 | cut -d ":" -f 1)+1))" approval.txt
+  613  2016-07-15 11:56:55 tail -n "+$(($(grep -n 'Approved By:' approval.txt | head -n 1 | cut -d ":" -f 1)+1))" approval.txt
+  615  2016-07-15 12:00:43 tail -n "+$(($(grep -n 'Approved By:' approval.txt | head -n 1 | cut -d ":" -f 1)+1))" approval.txt | awk '{print $1}'
+  618  2016-07-15 13:35:48 myarr=($(tail -n "+$(($(grep -n 'Approved By:' approval.txt | head -n 1 | cut -d ":" -f 1)+1))" approval.txt| awk '{ print $1 }'))
+  689  2016-07-18 09:18:37 cat column_file.txt | grep | vivian
+  690  2016-07-18 09:18:49 cat column_file.txt | grep vivian
+  691  2016-07-18 09:19:02 cat column_file.txt | grep Vivian
+  692  2016-07-18 09:51:46 cat column_file.txt | grep Vivian && echo $?
+  721  2016-07-18 10:12:46 grep -n 'Approved By:' approved.txt | head -n 1 | cut -d ":" -f 1)+1))" approved.txt| awk '{ print $1 }'
+  743  2016-07-18 10:33:09 grep -f clean_columns.txt approved.txt
+  744  2016-07-18 10:33:22 grep -f approved.txt clean_columns.txt 
+  745  2016-07-18 10:33:46 grep -v -F -x -f approved.txt clean_columns.txt
+  752  2016-07-18 10:35:56 grep -V approved.txt clean_columns.txt
+  753  2016-07-18 10:36:10 grep -v approved.txt clean_columns.txt
+  755  2016-07-18 10:36:36 grep -v clean_columns.txt approved.txt
+  758  2016-07-18 10:39:11 grep -Fxvf tempapprove tempcleaned
+  764  2016-07-18 10:40:43 grep -Fxvf tempcleaned tempapprove 
+  773  2016-07-18 10:51:12 history | grep sed
+  800  2016-07-18 11:15:34 history | grep awk
+  887  2016-07-18 12:11:31 grep Alex approved.txt
+  987  2016-07-19 10:47:18 grep (Webb|Mahoney|Worsham|Collins) clean_columns.txt 
+  988  2016-07-19 10:47:34 grep 'Webb|Mahoney|Worsham|Collins' clean_columns.txt 
+  989  2016-07-19 10:47:51 grep Webb clean_columns.txt
+  991  2016-07-19 10:51:50 grep Christy clean_columns.txt 

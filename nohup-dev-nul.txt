@@ -1,0 +1,1 @@
+nohup ./top_5_users.sh /dev/null 2>&1&

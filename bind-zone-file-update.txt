@@ -1,0 +1,89 @@
+sudo /etc/init.d/bind9 stop
+zroot=/etc/bind/zones
+#$1 hostname $2 last octet $3 zone or subnet
+echo $1"        IN      A       192.168.$3."$2 >> $zroot/db.mj12net.local
+echo $2"        IN      PTR     "$1".mj12net.local.     ; 192.168.$3."$2 >> $zroot/db.192.168.$3
+
+ZONES_PATH="/etc/bind/zones"
+DATE=$(date +%Y%m%d)
+# we're looking line containing this comment
+NEEDLE="Serial"
+for ZONE in $(ls -1 $ZONES_PATH) ; do
+    curr=$(/bin/grep -e "${NEEDLE}$" $ZONES_PATH/${ZONE} | /bin/sed -n "s/^\s*\([0-9]*\)\s*;\s*${NEEDLE}\s*/\1/p")
+    # replace if current date is shorter (possibly using different format)
+    if [ ${#curr} -lt ${#DATE} ]; then
+      serial="${DATE}00"
+    else
+      prefix=${curr::-2}
+      if [ "$DATE" -eq "$prefix" ]; then # same day
+        num=${curr: -2} # last two digits from serial number
+        num=$((10#$num + 1)) # force decimal representation, increment
+        serial="${DATE}$(printf '%02d' $num )" # format for 2 digits
+      else
+        serial="${DATE}00" # just update date
+      fi
+    fi
+    /bin/sed -i -e "s/^\(\s*\)[0-9]\{0,\}\(\s*;\s*${NEEDLE}\)$/\1${serial}\2/" ${ZONES_PATH}/${ZONE}
+    echo "${ZONE}: "
+    grep "; ${NEEDLE}$" $ZONES_PATH/${ZONE}
+done
+sudo /etc/init.d/bind9 start
+
+////////////////////////////////////////////
+
+back out last entry:
+
+sudo sed -i -e 's/2017020401/2017020400/' *
+
+sudo sed -i '$ d' /etc/bind/zones/db.mj12net.local && sudo sed -i '$ d' /etc/bind/zones/db.192.168.134
+
+///////////////////////////////////////////
+
+change /etc/bind to /etc/bind/zones in /etc/bind/named.conf.local
+
+sudo sed -i 's/\/etc\/bind/\/etc\/bind\/zones/g' /etc/bind/named.conf.local
+
+///////////////////////////////////////////
+
+
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns.mj12net.local. brian.localhost. (
+                              5         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@     IN      NS      ns.mj12net.local.               ; 192.168.134.3
+4     IN      PTR     puppet-master.mj12net.local.    ; 192.168.134.4
+5     IN      PTR     puppet-slave.mj12net.local.     ; 192.168.134.5
+6     IN      PTR     elk-server.mj12net.local.       ; 192.168.134.6
+7     IN      PTR     elk-client.mj12net.local.       ; 192.168.134.7
+
+
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     ns.mj12net.local. brian.localhost. (
+                              6         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      ns.mj12net.local.
+@       IN      A       127.0.0.1
+@       IN      AAAA    ::1
+
+; Below are A record addresses
+
+ns              IN      A       192.168.134.3
+puppet-master   IN      A       192.168.134.4
+puppet-slave    IN      A       192.168.134.5
+elk-server      IN      A       192.168.134.6
+elk-client      IN      A       192.168.134.7
+brianbills-pc   IN      A       192.168.1.9

@@ -1,0 +1,153 @@
+/////Elk Stack Setup/////
+
+ssh -Y bbills@192.168.134.6
+
+bbills@elk-server:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 16.04 LTS
+Release:        16.04
+Codename:       xenial
+
+sudo apt-get install -y software-properties-common python-software-properties
+
+sudo add-apt-repository ppa:git-core/ppa
+
+sudo apt-get update
+
+sudo apt-get install -y git
+
+sudo add-apt-repository -y ppa:webupd8team/java
+
+sudo apt-get -y install oracle-java8-installer
+
+sudo rm -Rf /etc/apt/sources.list.d/webupd8team-java.list
+
+sudo apt-get update
+
+sudo add-apt-repository ppa:webupd8team/java
+
+sudo apt-get update
+
+click "okay"
+
+click "yes"
+
+java -version
+
+java version "1.8.0_121"
+Java(TM) SE Runtime Environment (build 1.8.0_121-b13)
+Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)
+
+wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+sudo apt-get update
+
+sudo apt-get -y install elasticsearch
+
+sudo vi /etc/elasticsearch/elasticsearch.yml
+
+Uncomment line with "#network.host: 192.168.0.1"
+
+make it read "network.host: localhost"
+
+sudo service elasticsearch restart
+
+sudo update-rc.d elasticsearch defaults 95 10
+
+sudo apt-get install -y curl
+
+sudo sed -i 's/#START_DAEMON/START_DAEMON/' /etc/default/elasticsearch
+
+sudo systemctl restart elasticsearch
+
+systemctl status elasticsearch
+
+bbills@elk-server:~$ curl -X GET 'http://127.0.0.1:9200'
+{
+  "status" : 200,
+  "name" : "Alchemy",
+  "cluster_name" : "elasticsearch",
+  "version" : {
+    "number" : "1.7.3",
+    "build_hash" : "NA",
+    "build_timestamp" : "NA",
+    "build_snapshot" : false,
+    "lucene_version" : "4.10.4"
+  },
+  "tagline" : "You Know, for Search"
+}
+
+wget https://download.elastic.co/logstash/logstash/packages/debian/logstash_2.3.4-1_all.deb
+
+sudo dpkg -i logstash_2.3.4-1_all.deb
+
+sudo update-rc.d logstash defaults 97 8
+
+sudo service logstash start
+
+sudo service logstash status
+
+cd /etc/ssl
+
+openssl req -x509 -nodes -newkey rsa:2048 -days 365 -keyout logstash-forwarder.key -out logstash-forwarder.crt -subj /CN=elk-server.mj12net.local
+
+sudo vi /etc/logstash/conf.d/logstash.conf
+
+make it look like this:
+
+bbills@elk-server:/etc/logstash/conf.d$ cat /etc/logstash/conf.d/logstash.conf
+input {
+ beats {
+   port => 5044
+   ssl => true
+   ssl_certificate => "/etc/ssl/logstash-forwarder.crt"
+   ssl_key => "/etc/ssl/logstash-forwarder.key"
+   congestion_threshold => "40"
+  }
+}
+
+filter {
+if [type] == "syslog" {
+    grok {
+      match => { "message" => "%{SYSLOGLINE}" }
+    }
+
+    date {
+match => [ "timestamp", "MMM  d HH:mm:ss", "MMM dd HH:mm:ss" ]
+}
+  }
+
+}
+
+output {
+ elasticsearch {
+  hosts => localhost
+    index => "%{[@metadata][beat]}-%{+YYYY.MM.dd}"
+       }
+stdout {
+    codec => rubydebug
+       }
+}
+
+sudo systemctl start logstash
+
+sudo systemctl status logstash
+
+sudo systemctl enable logstash
+
+you can troubleshoot any issues by looking at:
+
+sudo cat /var/log/logstash/logstash.log
+
+echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
+
+sudo apt-get update && sudo apt-get install -y filebeat
+
+from client:
+
+scp -pr root@elk.server.mj12net.local:/etc/ssl/logstash-forwarder.crt /etc/ssl
+
+openssl req -config /etc/ssl/openssl.cnf -x509  -batch -nodes -newkey rsa:2048 -keyout /var/lib/logstash/private/logstash-forwarder.key -out /var/lib/logstash/private/logstash-forwarder.crt -subj /CN=192.168.134.6
+
+cd /opt/logstash/bin && ./logstash -f /etc/logstash/conf.d/02-beats-input.conf
