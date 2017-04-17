@@ -2,7 +2,7 @@ Below is the MD5 crypted version of 2421Mission!
 
 I got it from typing the following command:
 
-printf "2421Mission!" | mkpasswd -s -m md5
+printf "********" | mkpasswd -s -m md5
 
 $1$GJqmkpqr$whGL7MgdbFrty3X3Xnk5s1
 
@@ -12,10 +12,10 @@ d-i debian-installer/country string US
 d-i keyboard-configuration/xkb-keymap select us
 d-i passwd/user-fullname string Brian Bills
 d-i passwd/username string bbills
-d-i passwd/root-password password 2421Mission!
-d-i passwd/root-password-again password 2421Mission!
-d-i passwd/user-password password 2421Mission!
-d-i passwd/user-password-again password 2421Mission!
+d-i passwd/root-password password ********
+d-i passwd/root-password-again password ********
+d-i passwd/user-password password *******
+d-i passwd/user-password-again password *******
 d-i user-setup/allow-password-weak boolean true
 d-i netcfg/choose_interface select auto
 d-i netcfg/get_hostname string unassigned-hostname
