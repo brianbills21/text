@@ -13,3 +13,6 @@ puppet.conf
 sed-commands-brian  
 ubuntu-1604-elk-server-installation.txt  
 ubuntu-dns-bind-server-installation.txt  
+mj12net.local.db  
+192.168.134.db  
+192.168.1.db  
