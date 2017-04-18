@@ -25,3 +25,4 @@ ubuntu1604_named.conf.local
 ubuntu1604_named.conf.default-zones  	
 ubuntu1604_named.conf.options  
 centos7_named.conf
+ubuntu-16.04-preseed.cfg
