@@ -1,6 +1,6 @@
 # text
 SysAdmin and DevOps text files  
-anaconda-ks.cfg  
+centos7-headless-anaconda-ks.cfg  
 awk-commands-brian  
 bind-zone-file-update.txt  
 cat-commands-brian  
