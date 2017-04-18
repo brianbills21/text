@@ -28,4 +28,4 @@ $TTL    604800
 141     IN      PTR     ansclient1.mj12net.local.       ; 192.168.134.141
 142     IN      PTR     centjenkins.mj12net.local.      ; 192.168.134.142
 143     IN      PTR     centvagrant.mj12net.local.      ; 192.168.134.143
-144     IN      PTR     centdocker.mj12net.local.       ; 192.168.134.144
+144     IN      PTR     centdocker.mj12net.local.       ; 192.168.134.144  
