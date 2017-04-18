@@ -11,8 +11,8 @@ nohup-dev-nul.txt
 preseed_file.txt  
 puppet.conf  
 sed-commands-brian  
-ubuntu-1604-elk-server-installation.txt  
-ubuntu-1604-dns-bind-server-installation.txt  
+ubuntu-16.04-elk-server-installation.txt  
+ubuntu-16.04-dns-bind-server-installation.txt  
 centos7_mj12net.local.db  
 centos7_192.168.134.db  
 centos7_192.168.1.db  
