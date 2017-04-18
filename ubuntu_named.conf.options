@@ -1,0 +1,26 @@
+zone "mj12net.local" {
+             type master;
+             file "/etc/bind/zones/db.mj12net.local";
+        };
+ 
+zone "134.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/zones/db.192.168.134";
+};
+zone "1.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/zones/db.192.168.1";
+};
+bbills@ns:~$ cat /etc/bind/named.conf.options
+options {
+        directory "/var/cache/bind";
+forwarders {
+    8.8.8.8;
+    8.8.4.4;
+};
+
+        auth-nxdomain no;    # conform to RFC1035
+        listen-on-v6 { any; };
+};

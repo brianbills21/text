@@ -1,0 +1,15 @@
+zone "mj12net.local" {
+             type master;
+             file "/etc/bind/zones/db.mj12net.local";
+        };
+ 
+zone "134.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/zones/db.192.168.134";
+};
+zone "1.168.192.in-addr.arpa" {
+        type master;
+        notify no;
+        file "/etc/bind/zones/db.192.168.1";
+};
