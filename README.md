@@ -1,5 +1,5 @@
 # text
-sysadmin and devops text files  
+SysAdmin and DevOps text files  
 anaconda-ks.cfg  
 awk-commands-brian  
 bind-zone-file-update.txt  
