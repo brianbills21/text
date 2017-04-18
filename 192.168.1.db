@@ -1,0 +1,13 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    704800
+@       IN      SOA     ns.mj12net.local. brian.localhost. (
+                     2017041300         ; Serial
+                         704800         ; Refresh
+                          87400         ; Retry
+                        2419200         ; Expire
+                         704800 )       ; Negative Cache TTL
+;
+@       IN      NS      centos-server.mj12net.local.    ; 192.178.134.4
+9       IN      PTR     brianbills-pc.mj12net.local.    ; 192.178.1.9

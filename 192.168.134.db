@@ -1,0 +1,31 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     centos-server.mj12net.local. brian.mj12net.local. (
+                     2017041300         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      centos-server.mj12net.local.    ; 192.168.134.4
+3       IN      PTR     ns.mj12net.local.               ; 192.168.134.3
+5       IN      PTR     puppet-slave.mj12net.local.     ; 192.168.134.5
+6       IN      PTR     elk-server.mj12net.local.       ; 192.168.134.6
+131     IN      PTR     mirror-server.mj12net.local.    ; 192.168.134.131
+132     IN      PTR     jenkins-server.mj12net.local.   ; 192.168.134.132
+133     IN      PTR     puppet-master.mj12net.local.    ; 192.168.134.133
+134     IN      PTR     ansible-server.mj12net.local.   ; 192.168.134.134
+130     IN      PTR     git-server.mj12net.local.       ; 192.168.134.130
+135     IN      PTR     teamcity.mj12net.local.         ; 192.168.134.135
+136     IN      PTR     openfiler.mj12net.local.        ; 192.168.134.136
+137     IN      PTR     learning.mj12net.local.         ; 192.168.134.137
+138     IN      PTR     test-server.mj12net.local.      ; 192.168.134.138
+4       IN      PTR     centos-server.mj12net.local.    ; 192.168.134.4
+139     IN      PTR     centgitolite.mj12net.local.     ; 192.168.134.139
+140     IN      PTR     centansible.mj12net.local.      ; 192.168.134.140
+141     IN      PTR     ansclient1.mj12net.local.       ; 192.168.134.141
+142     IN      PTR     centjenkins.mj12net.local.      ; 192.168.134.142
+143     IN      PTR     centvagrant.mj12net.local.      ; 192.168.134.143
+144     IN      PTR     centdocker.mj12net.local.       ; 192.168.134.144

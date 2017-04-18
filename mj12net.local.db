@@ -1,0 +1,37 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL    604800
+@       IN      SOA     centos-server.mj12net.local. brian.localhost. (
+                     2017041300         ; Serial
+                         604800         ; Refresh
+                          86400         ; Retry
+                        2419200         ; Expire
+                         604800 )       ; Negative Cache TTL
+;
+@       IN      NS      centos-server.mj12net.local.
+@       IN      A       127.0.0.1
+@       IN      AAAA    ::1
+
+; Below are A record addresses
+
+ns              IN      A       192.168.134.3
+centos-server   IN      A       192.168.134.4
+puppet-slave    IN      A       192.168.134.5
+elk-server      IN      A       192.168.134.6
+brianbills-pc   IN      A       192.168.1.9
+mirror-server   IN      A       192.168.134.131
+jenkins-server  IN      A       192.168.134.132
+puppet-master   IN      A       192.168.134.133
+ansible-server  IN      A       192.168.134.134
+git-server      IN      A       192.168.134.130
+teamcity        IN      A       192.168.134.135
+openfiler       IN      A       192.168.134.136
+learning        IN      A       192.168.134.137
+test-server     IN      A       192.168.134.138
+centgitolite    IN      A       192.168.134.139
+centansible     IN      A       192.168.134.140
+ansclient1      IN      A       192.168.134.141
+centjenkins     IN      A       192.168.134.142
+centvagrant     IN      A       192.168.134.143
+centdocker      IN      A       192.168.134.144
