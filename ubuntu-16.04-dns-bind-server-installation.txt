@@ -131,8 +131,8 @@ $TTL    604800
 ns              IN      A       192.168.134.3
 puppet-master   IN      A       192.168.134.4
 puppet-slave    IN      A       192.168.134.5
-elk-server		IN		A		192.168.134.6
-elk-client		IN		A		192.168.134.7
+elk-server	IN	A	192.168.134.6
+elk-client	IN	A	192.168.134.7
 brianbills-pc   IN      A       192.168.1.9
 //////////////////////////////////////////////////////////////
 sudo cp /etc/bind/db.127 /etc/bind/db.192.168.134
