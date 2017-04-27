@@ -1,8 +1,7 @@
 1008  tcpdump 192.168.1.9  
 1009  yum install tcpdump  
 1012  tcpdump -i ens33  
-1014  tcpdump -c 5 -i ens33  
-1015  tcpdump -A 5 -i ens33  
+1014  tcpdump -c 5 -i ens33   
 1016  tcpdump -A -i ens33  
 1018  tcpdump -D  
 1019  tcpdump -XX -i ens33 | tail -f  
