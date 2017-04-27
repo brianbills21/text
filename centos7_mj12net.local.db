@@ -3,7 +3,7 @@
 ;
 $TTL    604800
 @       IN      SOA     centos-server.mj12net.local. brian.localhost. (
-                     2017041300         ; Serial
+                     2017041900         ; Serial
                          604800         ; Refresh
                           86400         ; Retry
                         2419200         ; Expire
@@ -35,3 +35,4 @@ ansclient1      IN      A       192.168.134.141
 centjenkins     IN      A       192.168.134.142
 centvagrant     IN      A       192.168.134.143
 centdocker      IN      A       192.168.134.144
+centgerrit      IN      A       192.168.134.145
