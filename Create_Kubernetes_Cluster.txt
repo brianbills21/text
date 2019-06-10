@@ -6,11 +6,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@kubernetes-node02
 
 login to all three and accept the fingerprint
 
-ansible 192.168.134.153 -m shell -a 'useradd centos'
-
-ssh-copy-id -i ~/.ssh/id_rsa.pub centos@kubernetes-master
-
-login and accept the fingerprint on the master
+ansible kubernetes-master -m shell -a 'useradd centos'
 
 ansible kubernetes -m shell -a 'swapoff -a'
 
