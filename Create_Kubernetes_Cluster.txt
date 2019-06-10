@@ -92,6 +92,7 @@ vi ~/kube-cluster/kube-dependencies.yml
         allow_downgrade: yes
 	
 ansible-playbook -i hosts ~/kube-cluster/kube-dependencies.yml
+
 vi ~/kube-cluster/master.yml
 
 - hosts: kubernetes-master
