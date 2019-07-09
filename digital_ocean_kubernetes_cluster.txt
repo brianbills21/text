@@ -6,16 +6,6 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@kubernetes-node02
 
 login to all three and accept the fingerprint
 
-ansible 192.168.134.153 -m shell -a 'useradd centos'
-
-ssh-copy-id -i ~/.ssh/id_rsa.pub centos@kubernetes-master
-
-login and accept the fingerprint on the master
-
-ansible kubernetes -m shell -a 'swapoff -a'
-
-ansible kubernetes -m shell -a 'sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab'
-
 mkdir ~/kube-cluster
 
 cd ~/kube-cluster
@@ -28,6 +18,17 @@ kubernetes-master ansible_host=192.168.134.153 ansible_user=root
 [workers]
 kubernetes-node01 ansible_host=192.168.134.154 ansible_user=root
 kubernetes-node02 ansible_host=192.168.134.154 ansible_user=root
+
+[ kubernetes ]
+kubernetes-master ansible_host=192.168.134.153 ansible_user=root
+kubernetes-node01 ansible_host=192.168.134.154 ansible_user=root
+kubernetes-node02 ansible_host=192.168.134.154 ansible_user=root
+
+ansible kubernetes-master -m shell -a 'useradd centos'
+
+ansible kubernetes -m shell -a 'swapoff -a'
+
+ansible kubernetes -m shell -a 'sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab'
 
 vi ~/kube-cluster/kube-dependencies.yml
 
@@ -149,6 +150,7 @@ vi ~/kube-cluster/workers.yml
       set_fact:
         join_command: "{{ join_command_raw.stdout_lines[0] }}"
 
+
 - hosts: workers
   become: yes
   tasks:
@@ -181,4 +183,3 @@ kubectl get deployments
 should see:
 
 No resources found.
-
