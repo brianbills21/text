@@ -33,7 +33,7 @@ location / {
 sudo systemctl start nginx.service
 sudo systemctl enable nginx.service
 cat /var/lib/jenkins/secrets/initialAdminPassword
-copy the string
-go to http://192.168.134.142
-paste in the string and click next
-add account and choose defaults
+#copy the string
+#go to http://192.168.134.142
+#paste in the string and click next
+#add account and choose defaults
