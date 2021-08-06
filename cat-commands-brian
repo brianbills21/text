@@ -1,213 +1,213 @@
-  154  2016-07-12 09:40:20 cat compare.csv
-  160  2016-07-12 09:42:26 cat compare.csv 
-  164  2016-07-12 10:09:19 cat compare.txt 
-  167  2016-07-12 10:15:35 cat compare.txt | awk '{print $1}' | tee cylance.txt
-  168  2016-07-12 10:18:20 cat compare.txt | awk '{print $2}' | tee compucom.txt
-  170  2016-07-12 10:18:37 cat compucom.txt 
-  174  2016-07-12 10:19:07 cat compare.txt | awk '{print $3}' | tee compucom.txt
-  175  2016-07-12 10:19:12 cat compucom.txt 
-  185  2016-07-12 10:22:20 cat compare.txt | awk '{print $2}' | more
-  190  2016-07-12 10:24:28 cat compare.txt | awk '{print $2}' | tee compucom.txt
-  195  2016-07-12 10:25:56 cat compucom.txt 
-  197  2016-07-12 10:26:58 cat compucom.txt | sed '/^\s*$/d' >> compucom2.txt
-  198  2016-07-12 10:27:06 cat compucom2.txt
-  204  2016-07-12 10:33:38 cat compucom.txt
-  205  2016-07-12 10:33:45 cat cylance.txt 
-  207  2016-07-12 10:36:24 cat add-agent.txt 
-  208  2016-07-12 10:36:54 cat add-agent.txt | wc -l
-  209  2016-07-12 10:37:08 cat compucom.txt 
-  211  2016-07-12 10:37:20 cat compucom.txt | wc -l
-  212  2016-07-12 10:37:31 cat cylance.txt | wc -l
-  213  2016-07-12 10:38:17 cat cylance.txt | wc -l
-  214  2016-07-12 10:38:29 cat compucom.txt | wc -l
-  231  2016-07-12 10:49:20 cat add-agent.txt | wc -l
-  240  2016-07-12 10:54:17 cat add-agent.txt | wc -l
-  242  2016-07-12 10:57:30 cat add-agent.txt | wc -l
-  245  2016-07-12 11:04:59 cat cylance.txt | wc -l
-  246  2016-07-12 11:05:17 cat compucom.txt | wc -l
-  247  2016-07-12 11:05:43 cat add-agent.txt | wc -l
-  255  2016-07-12 11:16:42 cat add-agent.txt | wc -l
-  260  2016-07-12 11:25:57 cat compare.txt | sed 's/^ *//g' | more
-  261  2016-07-12 11:26:25 cat compare.txt | sed 's/^ *//g' | tee compare2.txt
-  264  2016-07-12 11:43:25 cat cylance2.txt 
-  265  2016-07-12 11:43:50 cat cylance2.txt | wc -l
-  277  2016-07-12 11:51:35 cat cylance.txt | sort -u > cylance2.txt
-  278  2016-07-12 11:51:44 cat cylance.txt | wc -l
-  279  2016-07-12 11:51:51 cat cylance2.txt | wc -l
-  284  2016-07-12 11:53:30 cat compucom.txt | sort -u | wc -l
-  285  2016-07-12 11:53:55 cat compucom.txt | wc -l
-  289  2016-07-12 11:55:44 cat add-agent.txt | wc -l
-  292  2016-07-12 13:45:00 cat add-agent2.txt | wc -l
-  297  2016-07-12 13:46:40 cat compucom.txt cylance.txt > total-list.txt
-  299  2016-07-12 13:47:35 cat total-list.txt | sort -u > total-list2.txt
-  300  2016-07-12 13:47:45 cat total-list2.txt | wc -l
-  308  2016-07-12 13:49:45 cat add-agent.txt | wc -l
-  319  2016-07-12 14:00:05 cat add-agent.txt | grep "^T"
-  320  2016-07-12 14:01:48 cat add-agent.txt | grep "^T" > add-agent-T.`date +"%m%d%Y"`.txt
-  329  2016-07-12 14:04:02 cat add-agent.txt | grep "^M" > add-agent-M.`date +"%m%d%y"`.txt
-  330  2016-07-12 14:04:23 cat add-agent.txt | grep "^D" > add-agent-D.`date +"%m%d%y"`.txt
-  331  2016-07-12 14:04:36 cat add-agent.txt | grep "^L" > add-agent-L.`date +"%m%d%y"`.txt
-  335  2016-07-12 14:05:50 cat add-agent.txt | grep "^B" > add-agent-B.`date +"%m%d%y"`.txt
-  336  2016-07-12 14:06:08 cat add-agent.txt | grep "^C" > add-agent-C.`date +"%m%d%y"`.txt
-  354  2016-07-12 14:12:03 cat add-agent.txt | wc -l
-  361  2016-07-12 14:29:22 cat notincompucom.txt | wc -l
-  362  2016-07-12 14:29:59 cat notincylance.txt | wc -l
-  380  2016-07-12 14:40:22 cat add-agent-A.071216.txt
-  381  2016-07-12 14:40:32 cat add-agent-B.071216.txt
-  387  2016-07-12 14:42:31 cat add-agent-C.071216.txt
-  398  2016-07-12 14:44:36 cat add-agent-D.071216.txt
-  407  2016-07-12 14:47:10 cat add-agent-DATACON.071216.txt
-  412  2016-07-12 14:48:22 cat add-agent-B.071216.txt
-  413  2016-07-12 14:48:37 cat add-agent-C.071216.txt
-  414  2016-07-12 14:48:46 cat add-agent-D.071216.txt
-  448  2016-07-12 15:16:39 cat add-agent-Mac.071216.txt
-  450  2016-07-12 15:17:37 cat add-agent-Mac.071216.txt
-  453  2016-07-12 15:19:07 cat add-agent-Mac.071216.txt
-  485  2016-07-12 15:36:54 cat add-agent-all.071216.csv
-  487  2016-07-12 15:52:06 cat add-agent-all.071216.csv
-  489  2016-07-12 15:52:59 cat add-agent-all.071216.csv
-  491  2016-07-12 15:56:14 cat add-agent-all.071216.csv
-  497  2016-07-12 15:57:06 cat add-agent-T.071216.txt
-  522  2016-07-12 16:29:13 cat add-agent-all.071216.csv
-  556  2016-07-15 10:41:15 cat column_file.txt | awk '{print $1,$3}' | column -t
-  557  2016-07-15 10:43:48 cat column_file.txt | awk '{print $1,$3,$4}' | column -t 
-  566  2016-07-15 11:22:19 cat column_file.txt 
-  571  2016-07-15 11:24:27 cat column_cleanup.sh
-  573  2016-07-15 11:24:54 cat column_file.txt 
-  575  2016-07-15 11:27:12 cat column_file.txt | awk '{print $1,$3,$4}' | column -t
-  583  2016-07-15 11:33:15 cat appclear
-  585  2016-07-15 11:33:28 cat approval.txt 
-  588  2016-07-15 11:39:16 cat approval.txt | sed -e '1,/Approved/d'
-  589  2016-07-15 11:39:36 cat approval.txt 
-  591  2016-07-15 11:40:33 cat approval.txt 
-  592  2016-07-15 11:40:48 cat approval.txt | sed -e '1,/Approved By:/d'
-  593  2016-07-15 11:41:48 cat approval.txt | sed -i '1,/Approved By:/d'
-  595  2016-07-15 11:42:24 cat approval.txt 
-  597  2016-07-15 11:44:08 cat approval.txt | awk 'BEGIN{ found=0} /Approved/{found=1}  {if (found) print }'
-  602  2016-07-15 11:51:37 cat column_file.txt 
-  607  2016-07-15 11:52:31 cat column_cleanup.sh
-  609  2016-07-15 11:53:37 cat column_cleanup.sh 
-  610  2016-07-15 11:55:00 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$3,$4}' | column -t
-  622  2016-07-15 13:40:51 cat approval.txt 
-  627  2016-07-15 13:45:48 cat column_file.txt 
-  632  2016-07-15 13:47:30 cat clean_columns.txt 
-  644  2016-07-15 13:50:00 cat rejected.sh
-  648  2016-07-15 13:50:51 cat rejected.sh
-  663  2016-07-15 14:17:15 cat rejected.sh
-  666  2016-07-15 16:21:59 cat rejected.txt 
-  667  2016-07-15 16:22:08 cat rejected
-  668  2016-07-15 16:22:14 cat rejected.sh
-  669  2016-07-15 16:22:56 cat clean_columns.txt.bak
-  672  2016-07-18 08:58:39 cat column_file.txt
-  673  2016-07-18 08:58:50 cat clean_columns.txt.bak
-  676  2016-07-18 08:59:37 cat column_file.txt
-  677  2016-07-18 08:59:45 cat clean_columns.txt
-  680  2016-07-18 09:00:08 cat rejected.sh
-  683  2016-07-18 09:01:52 cat clean_columns.txt
-  689  2016-07-18 09:18:37 cat column_file.txt | grep | vivian
-  690  2016-07-18 09:18:49 cat column_file.txt | grep vivian
-  691  2016-07-18 09:19:02 cat column_file.txt | grep Vivian
-  692  2016-07-18 09:51:46 cat column_file.txt | grep Vivian && echo $?
-  694  2016-07-18 09:53:52 cat approvers.txt 
-  695  2016-07-18 09:53:59 cat approval.txt 
-  698  2016-07-18 09:54:16 cat approval.txt 
-  699  2016-07-18 09:54:28 cat rejected.txt 
-  700  2016-07-18 09:54:40 cat rejected.sh
-  702  2016-07-18 09:55:41 cat clean_columns.txt 
-  703  2016-07-18 09:59:38 cat approval.txt 
-  706  2016-07-18 10:02:45 cat clean_columns.txt 
-  707  2016-07-18 10:03:24 cat approval.txt 
-  710  2016-07-18 10:03:53 cat column_cleanup.sh 
-  711  2016-07-18 10:06:18 cat rejected.sh
-  720  2016-07-18 10:12:06 cat approved.sh 
-  723  2016-07-18 10:19:47 cat approved.txt
-  724  2016-07-18 10:20:13 cat approved.txt 
-  726  2016-07-18 10:21:07 cat approved.txt | sed '1d' | awk '{print $1}'
-  728  2016-07-18 10:22:36 cat clean_columns.txt | awk '{print $2}'
-  734  2016-07-18 10:23:45 cat rejected.sh
-  738  2016-07-18 10:24:16 cat splitaddagent.sh 
-  746  2016-07-18 10:34:13 cat approved.txt
-  756  2016-07-18 10:37:38 cat approved.txt | sed '1d' | awk '{print $1}' > tempapprove
-  757  2016-07-18 10:37:56 cat clean_columns.txt | awk '{print $2}' > tempcleaned
-  760  2016-07-18 10:39:38 cat clean_columns.txt 
-  761  2016-07-18 10:40:04 cat tempcleaned 
-  762  2016-07-18 10:40:16 cat tempapprove 
-  767  2016-07-18 10:46:53 cat clean_columns.txt
-  768  2016-07-18 10:47:20 cat column_file.txt
-  771  2016-07-18 10:47:53 cat approved.txt 
-  775  2016-07-18 10:51:47 cat approved.txt | sed '1d' | awk '{print $3}'
-  777  2016-07-18 11:01:41 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^|\(.*\)|$/\1/'
-  778  2016-07-18 11:02:39 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
-  779  2016-07-18 11:04:06 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.*//'
-  781  2016-07-18 11:06:19 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
-  782  2016-07-18 11:06:53 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | ex -sc '%s/\(\.\).*/\1/ | x'
-  783  2016-07-18 11:07:39 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.\/.*/.com/'
-  784  2016-07-18 11:08:28 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | 's/[.].*$//'
-  785  2016-07-18 11:08:36 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//'
-  788  2016-07-18 11:09:41 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempapproved
-  791  2016-07-18 11:12:09 cat tempcleaned 
-  792  2016-07-18 11:12:15 cat tempapproved 
-  795  2016-07-18 11:13:12 cat clean_columns.txt
-  796  2016-07-18 11:13:37 cat column_cleanup.sh 
-  799  2016-07-18 11:14:13 cat column_file.txt
-  803  2016-07-18 11:16:34 cat column_file.txt
-  806  2016-07-18 11:17:37 cat column_cleanup.sh
-  807  2016-07-18 11:18:42 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4}' | column -t
-  808  2016-07-18 11:22:25 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4,$5}' | column -t
-  810  2016-07-18 11:25:18 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $(NF-1),"\t",$NF}' | column -t
-  812  2016-07-18 11:28:00 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t
-  816  2016-07-18 11:30:02 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t > clean_columns.txt
-  817  2016-07-18 11:30:57 cat clean_columns.txt | awk '{print $2}'
-  818  2016-07-18 11:31:23 cat tempapproved 
-  819  2016-07-18 11:31:30 cat tempcleaned 
-  822  2016-07-18 11:32:18 cat clean_columns.txt | awk '{print $2}' > tempcleaned
-  823  2016-07-18 11:32:23 cat tempcleaned 
-  827  2016-07-18 11:33:32 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | uniq -c > tempappr
-  828  2016-07-18 11:33:39 cat tempappr
-  831  2016-07-18 11:34:06 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempappr
-  832  2016-07-18 11:34:10 cat tempappr 
-  835  2016-07-18 11:35:03 cat clean_columns.txt | awk '{print $2}' | sort -u > tempcl
-  836  2016-07-18 11:35:10 cat tempcl 
-  841  2016-07-18 11:38:44 cat tempappr
-  842  2016-07-18 11:38:58 cat tempcl
-  847  2016-07-18 11:41:26 cat column_cleanup.sh 
-  850  2016-07-18 11:49:21 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}'
-  851  2016-07-18 11:49:54 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u
-  855  2016-07-18 11:51:04 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempappr
-  856  2016-07-18 11:51:08 cat tempappr
-  859  2016-07-18 11:53:25 cat tempcl
-  860  2016-07-18 11:54:05 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempcl
-  861  2016-07-18 11:54:23 cat tempcl
-  862  2016-07-18 11:54:32 cat tempappr
-  865  2016-07-18 11:55:37 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
-  867  2016-07-18 11:56:58 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
-  870  2016-07-18 12:01:13 cat rejected.sh
-  871  2016-07-18 12:01:26 cat rejected.txt
-  873  2016-07-18 12:02:52 cat clean_columns.txt 
-  875  2016-07-18 12:03:01 cat rejected.txt
-  877  2016-07-18 12:03:23 cat rejected.sh
-  879  2016-07-18 12:04:08 cat approved.txt
-  880  2016-07-18 12:05:33 cat emailowners 
-  884  2016-07-18 12:10:53 cat emailowners.sh
-  885  2016-07-18 12:10:59 cat email.addresses 
-  886  2016-07-18 12:11:18 cat emailowners
-  891  2016-07-18 12:12:23 cat column_file.txt 
-  892  2016-07-18 12:13:56 ypcat hosts
-  901  2016-07-19 09:34:24 cat emailowners
-  941  2016-07-19 09:46:32 cat approved.sh
-  950  2016-07-19 09:48:08 cat emailowners.sh
-  953  2016-07-19 09:52:42 cat clean_columns.txt.bak
-  957  2016-07-19 09:55:43 cat emailowners.sh 
-  959  2016-07-19 10:04:34 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
-  960  2016-07-19 10:04:48 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
-  963  2016-07-19 10:05:37 cat tempcl 
-  965  2016-07-19 10:06:17 cat tempappr
-  966  2016-07-19 10:06:47 cat tempcl
-  972  2016-07-19 10:09:05 cat clean_columns.txt 
-  973  2016-07-19 10:09:36 cat rejected.sh
-  974  2016-07-19 10:10:06 cat rejected.txt
-  976  2016-07-19 10:11:16 cat clean_columns.txt 
-  979  2016-07-19 10:45:01 cat clean_columns.txt 
-  986  2016-07-19 10:46:28 cat rejected.txt
-  990  2016-07-19 10:51:34 cat rejected.txt
- 1017  2016-07-20 15:12:46 cat splitaddagent.sh 
+cat compare.csv
+cat compare.csv
+cat compare.txt
+cat compare.txt | awk '{print $1}' | tee cylance.txt
+cat compare.txt | awk '{print $2}' | tee compucom.txt
+cat compucom.txt
+cat compare.txt | awk '{print $3}' | tee compucom.txt
+cat compucom.txt
+cat compare.txt | awk '{print $2}' | more
+cat compare.txt | awk '{print $2}' | tee compucom.txt
+cat compucom.txt
+cat compucom.txt | sed '/^\s*$/d' >> compucom2.txt
+cat compucom2.txt
+cat compucom.txt
+cat cylance.txt
+cat add-agent.txt
+cat add-agent.txt | wc -l
+cat compucom.txt
+cat compucom.txt | wc -l
+cat cylance.txt | wc -l
+cat cylance.txt | wc -l
+cat compucom.txt | wc -l
+cat add-agent.txt | wc -l
+cat add-agent.txt | wc -l
+cat add-agent.txt | wc -l
+cat cylance.txt | wc -l
+cat compucom.txt | wc -l
+cat add-agent.txt | wc -l
+cat add-agent.txt | wc -l
+cat compare.txt | sed 's/^ *//g' | more
+cat compare.txt | sed 's/^ *//g' | tee compare2.txt
+cat cylance2.txt
+cat cylance2.txt | wc -l
+cat cylance.txt | sort -u > cylance2.txt
+cat cylance.txt | wc -l
+cat cylance2.txt | wc -l
+cat compucom.txt | sort -u | wc -l
+cat compucom.txt | wc -l
+cat add-agent.txt | wc -l
+cat add-agent2.txt | wc -l
+cat compucom.txt cylance.txt > total-list.txt
+cat total-list.txt | sort -u > total-list2.txt
+cat total-list2.txt | wc -l
+cat add-agent.txt | wc -l
+cat add-agent.txt | grep "^T"
+cat add-agent.txt | grep "^T" > add-agent-T.`date +"%m%d%Y"`.txt
+cat add-agent.txt | grep "^M" > add-agent-M.`date +"%m%d%y"`.txt
+cat add-agent.txt | grep "^D" > add-agent-D.`date +"%m%d%y"`.txt
+cat add-agent.txt | grep "^L" > add-agent-L.`date +"%m%d%y"`.txt
+cat add-agent.txt | grep "^B" > add-agent-B.`date +"%m%d%y"`.txt
+cat add-agent.txt | grep "^C" > add-agent-C.`date +"%m%d%y"`.txt
+cat add-agent.txt | wc -l
+cat notincompucom.txt | wc -l
+cat notincylance.txt | wc -l
+cat add-agent-A.071216.txt
+cat add-agent-B.071216.txt
+cat add-agent-C.071216.txt
+cat add-agent-D.071216.txt
+cat add-agent-DATACON.071216.txt
+cat add-agent-B.071216.txt
+cat add-agent-C.071216.txt
+cat add-agent-D.071216.txt
+cat add-agent-Mac.071216.txt
+cat add-agent-Mac.071216.txt
+cat add-agent-Mac.071216.txt
+cat add-agent-all.071216.csv
+cat add-agent-all.071216.csv
+cat add-agent-all.071216.csv
+cat add-agent-all.071216.csv
+cat add-agent-T.071216.txt
+cat add-agent-all.071216.csv
+cat column_file.txt | awk '{print $1,$3}' | column -t
+cat column_file.txt | awk '{print $1,$3,$4}' | column -t
+cat column_file.txt
+cat column_cleanup.sh
+cat column_file.txt
+cat column_file.txt | awk '{print $1,$3,$4}' | column -t
+cat appclear
+cat approval.txt
+cat approval.txt | sed -e '1,/Approved/d'
+cat approval.txt
+cat approval.txt
+cat approval.txt | sed -e '1,/Approved By:/d'
+cat approval.txt | sed -i '1,/Approved By:/d'
+cat approval.txt
+cat approval.txt | awk 'BEGIN{ found=0} /Approved/{found=1} {if (found) print }'
+cat column_file.txt
+cat column_cleanup.sh
+cat column_cleanup.sh
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$3,$4}' | column -t
+cat approval.txt
+cat column_file.txt
+cat clean_columns.txt
+cat rejected.sh
+cat rejected.sh
+cat rejected.sh
+cat rejected.txt
+cat rejected
+cat rejected.sh
+cat clean_columns.txt.bak
+cat column_file.txt
+cat clean_columns.txt.bak
+cat column_file.txt
+cat clean_columns.txt
+cat rejected.sh
+cat clean_columns.txt
+cat column_file.txt | grep | vivian
+cat column_file.txt | grep vivian
+cat column_file.txt | grep Vivian
+cat column_file.txt | grep Vivian && echo $?
+cat approvers.txt
+cat approval.txt
+cat approval.txt
+cat rejected.txt
+cat rejected.sh
+cat clean_columns.txt
+cat approval.txt
+cat clean_columns.txt
+cat approval.txt
+cat column_cleanup.sh
+cat rejected.sh
+cat approved.sh
+cat approved.txt
+cat approved.txt
+cat approved.txt | sed '1d' | awk '{print $1}'
+cat clean_columns.txt | awk '{print $2}'
+cat rejected.sh
+cat splitaddagent.sh
+cat approved.txt
+cat approved.txt | sed '1d' | awk '{print $1}' > tempapprove
+cat clean_columns.txt | awk '{print $2}' > tempcleaned
+cat clean_columns.txt
+cat tempcleaned
+cat tempapprove
+cat clean_columns.txt
+cat column_file.txt
+cat approved.txt
+cat approved.txt | sed '1d' | awk '{print $3}'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^|\(.*\)|$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.*//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | ex -sc '%s/\(\.\).*/\1/ | x'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.\/.*/.com/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | 's/[.].*$//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempapproved
+cat tempcleaned
+cat tempapproved
+cat clean_columns.txt
+cat column_cleanup.sh
+cat column_file.txt
+cat column_file.txt
+cat column_cleanup.sh
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4,$5}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $(NF-1),"\t",$NF}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t > clean_columns.txt
+cat clean_columns.txt | awk '{print $2}'
+cat tempapproved
+cat tempcleaned
+cat clean_columns.txt | awk '{print $2}' > tempcleaned
+cat tempcleaned
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | uniq -c > tempappr
+cat tempappr
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempappr
+cat tempappr
+cat clean_columns.txt | awk '{print $2}' | sort -u > tempcl
+cat tempcl
+cat tempappr
+cat tempcl
+cat column_cleanup.sh
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}'
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempappr
+cat tempappr
+cat tempcl
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempcl
+cat tempcl
+cat tempappr
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+cat rejected.sh
+cat rejected.txt
+cat clean_columns.txt
+cat rejected.txt
+cat rejected.sh
+cat approved.txt
+cat emailowners
+cat emailowners.sh
+cat email.addresses
+cat emailowners
+cat column_file.txt
+ypcat hosts
+cat emailowners
+cat approved.sh
+cat emailowners.sh
+cat clean_columns.txt.bak
+cat emailowners.sh
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+cat tempcl
+cat tempappr
+cat tempcl
+cat clean_columns.txt
+cat rejected.sh
+cat rejected.txt
+cat clean_columns.txt
+cat clean_columns.txt
+cat rejected.txt
+cat rejected.txt
+cat splitaddagent.sh
