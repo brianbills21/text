@@ -44,7 +44,7 @@ cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' 
 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempappr
 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempcl
 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
-at approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
