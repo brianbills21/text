@@ -1,50 +1,50 @@
-  181  2016-07-12 10:21:27 sed 's/[\t ]+/,/g' compare.txt > compare2.txt
-  194  2016-07-12 10:25:47 sed '/^$/d' compucom.txt 
-  197  2016-07-12 10:26:58 cat compucom.txt | sed '/^\s*$/d' >> compucom2.txt
-  260  2016-07-12 11:25:57 cat compare.txt | sed 's/^ *//g' | more
-  261  2016-07-12 11:26:25 cat compare.txt | sed 's/^ *//g' | tee compare2.txt
-  419  2016-07-12 14:54:37 sed "/\b\(DATACON\)\b/d" add-agent-D.071216.txt
-  420  2016-07-12 14:54:47 sed "/\b\(DATACON\)\b/d" add-agent-D.071216.txt | more
-  422  2016-07-12 14:56:36 sed "/\b\(DATACON*\)\b/d" add-agent-D.071216.txt | more
-  564  2016-07-15 11:21:31 sed -i 's/"11. "//g' column_file.txt
-  565  2016-07-15 11:22:09 sed -i 's/11. //g' column_file.txt
-  572  2016-07-15 11:24:39 sed -i 's/11. Folder Group Names: //g' column_file.txt
-  587  2016-07-15 11:38:13 sed -n -e '/Approved/,$p' approval.txt 
-  588  2016-07-15 11:39:16 cat approval.txt | sed -e '1,/Approved/d'
-  592  2016-07-15 11:40:48 cat approval.txt | sed -e '1,/Approved By:/d'
-  593  2016-07-15 11:41:48 cat approval.txt | sed -i '1,/Approved By:/d'
-  594  2016-07-15 11:42:18 sed -i '1,/Approved By:/d' approval.txt 
-  610  2016-07-15 11:55:00 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$3,$4}' | column -t
-  717  2016-07-18 10:11:47 sed -i 's/approval/approved/g' approval.sh 
-  726  2016-07-18 10:21:07 cat approved.txt | sed '1d' | awk '{print $1}'
-  742  2016-07-18 10:30:06 diff -u approved.txt clean_columns.txt  | sed -nr 's/^+([^+].*)/\1/p'
-  748  2016-07-18 10:35:16 sed '1d' approved.txt
-  750  2016-07-18 10:35:24 sed '1d' approved.txt 
-  756  2016-07-18 10:37:38 cat approved.txt | sed '1d' | awk '{print $1}' > tempapprove
-  773  2016-07-18 10:51:12 history | grep sed
-  775  2016-07-18 10:51:47 cat approved.txt | sed '1d' | awk '{print $3}'
-  777  2016-07-18 11:01:41 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^|\(.*\)|$/\1/'
-  778  2016-07-18 11:02:39 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
-  779  2016-07-18 11:04:06 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.*//'
-  781  2016-07-18 11:06:19 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
-  782  2016-07-18 11:06:53 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | ex -sc '%s/\(\.\).*/\1/ | x'
-  783  2016-07-18 11:07:39 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.\/.*/.com/'
-  784  2016-07-18 11:08:28 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | 's/[.].*$//'
-  785  2016-07-18 11:08:36 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//'
-  788  2016-07-18 11:09:41 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempapproved
-  807  2016-07-18 11:18:42 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4}' | column -t
-  808  2016-07-18 11:22:25 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4,$5}' | column -t
-  810  2016-07-18 11:25:18 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $(NF-1),"\t",$NF}' | column -t
-  812  2016-07-18 11:28:00 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t
-  816  2016-07-18 11:30:02 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t > clean_columns.txt
-  827  2016-07-18 11:33:32 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | uniq -c > tempappr
-  831  2016-07-18 11:34:06 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempappr
-  850  2016-07-18 11:49:21 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}'
-  851  2016-07-18 11:49:54 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u
-  855  2016-07-18 11:51:04 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempappr
-  860  2016-07-18 11:54:05 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempcl
-  865  2016-07-18 11:55:37 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
-  866  2016-07-18 11:56:30 at approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
-  867  2016-07-18 11:56:58 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
-  959  2016-07-19 10:04:34 cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
-  960  2016-07-19 10:04:48 cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+sed 's/[\t ]+/,/g' compare.txt > compare2.txt
+sed '/^$/d' compucom.txt
+cat compucom.txt | sed '/^\s*$/d' >> compucom2.txt
+cat compare.txt | sed 's/^ *//g' | more
+cat compare.txt | sed 's/^ *//g' | tee compare2.txt
+sed "/\b\(DATACON\)\b/d" add-agent-D.071216.txt
+sed "/\b\(DATACON\)\b/d" add-agent-D.071216.txt | more
+sed "/\b\(DATACON*\)\b/d" add-agent-D.071216.txt | more
+sed -i 's/"11. "//g' column_file.txt
+sed -i 's/11. //g' column_file.txt
+sed -i 's/11. Folder Group Names: //g' column_file.txt
+sed -n -e '/Approved/,$p' approval.txt
+cat approval.txt | sed -e '1,/Approved/d'
+cat approval.txt | sed -e '1,/Approved By:/d'
+cat approval.txt | sed -i '1,/Approved By:/d'
+sed -i '1,/Approved By:/d' approval.txt
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$3,$4}' | column -t
+sed -i 's/approval/approved/g' approval.sh
+cat approved.txt | sed '1d' | awk '{print $1}'
+diff -u approved.txt clean_columns.txt | sed -nr 's/^+([^+].*)/\1/p'
+sed '1d' approved.txt
+sed '1d' approved.txt
+cat approved.txt | sed '1d' | awk '{print $1}' > tempapprove
+history | grep sed
+cat approved.txt | sed '1d' | awk '{print $3}'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^|\(.*\)|$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.*//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | ex -sc '%s/\(\.\).*/\1/ | x'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/\.\/.*/.com/'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | 's/[.].*$//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//'
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempapproved
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$2,$3,$4,$5}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $(NF-1),"\t",$NF}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $1,$(NF-1),"\t",$NF}' | column -t > clean_columns.txt
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | uniq -c > tempappr
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' > tempappr
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}'
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempappr
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u > tempcl
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
+at approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
+cat column_file.txt | sed 's/11. Folder Group Names: //g' | awk '{print $--NF}' | sort -u | tee tempcl
+cat approved.txt | sed '1d' | awk '{print $3}' | sed 's/^.\(.*\).$/\1/' | sed 's/[.].*$//' | tee tempappr
