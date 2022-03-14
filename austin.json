@@ -1,0 +1,466 @@
+{
+	"accessibility-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/accessibility-service:1.0.10-86df397-121321102854",
+				"harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"accessibilitycrawford-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/accessibilitycrawford-service:master-ebc95d6-20211006145840",
+				"harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"accounting-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/accounting-service:4.1.0-9a8b850-111621144747",
+				"harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"authentication-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/authentication-service:3.2.0-3da5692-020222162357",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"autoprep-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/autoprep-api:3.16.4-4830179-030122110030",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"autoprep-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/devops/config-init:master-91ea56d-062720021322",
+				"dr-harbor.docmagic.com/docsys/autoprep-ui:1.23.3-d8fc26c-020922101408"
+			]
+		}
+	},
+	"autoprepeditor-ui": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"billingevent-service": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"cascustomer-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/cascustomer-service:4.8.0-SNAPSHOT-20210623172337-062321102337",
+				"dr-harbor.docmagic.com/library/busybox:1.32.0",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest",
+				"dr-harbor.docmagic.com/library/redis:6.0.9-alpine"
+			]
+		}
+	},
+	"cascustomer-service-v6": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/cascustomer-service-v6:6.5.1-dacdb66-022822144836",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"casfederation-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/casfederation-service:1.3.5-3a6664f-022322174350",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"casidentity-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/casidentity-service-v3:3.1.4-7540ea6-010622092024",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"cfpb-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/cfpb-service:2.0.0-SNAPSHOT-20201001160456",
+				"dr-harbor.docmagic.com/library/curl:latest",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"cleanup-dsivar": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/library/busybox:1.32.0"
+			]
+		}
+	},
+	"common-services": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/common-services:2.0.16-SNAPSHOT-20200501020034",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"databridge-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/databridge-service:master-59f71e9-022321133443"
+			]
+		}
+	},
+	"delegatedidp-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/delegatedidp-service:1.1.0-a236530-013122182747",
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"delegatedidp-ui": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"distill-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/distill-api:1.3.0-7b0e647-121321101324",
+				"dr-harbor.docmagic.com/docsys/dsiconfig-init:app1-030922180338",
+				"dr-harbor.docmagic.com/docsys/dsimaps-init:app1-030722183842",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"dmdirect-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dmdirect-api:1.97.3-1d5e546-021822095324",
+				"dr-harbor.docmagic.com/docsys/dsiconfig-init:app1-030822161715",
+				"dr-harbor.docmagic.com/docsys/dsimaps-init:app1-030722183842",
+				"dr-harbor.docmagic.com/docsys/dsitemplates-init:app1-030722184922",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"docmagic-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/devops/config-init:master-91ea56d-062720021322",
+				"dr-harbor.docmagic.com/docsys/docmagic-ui:DocMagic-UI-1.21.1-3db1fb5-102121134615"
+			]
+		}
+	},
+	"docmagiclite-ui": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"documentlibrary-api": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"dtd-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dtd-service:2.37.0-471eb6e-022422142148",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"emortgage-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/emortgage-service:1.4.0-SNAPSHOT-20200916174327"
+			]
+		}
+	},
+	"esign-api-v3": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/esign-api-v3:3.39.0-9e54f98-030722133935",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"esign-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dsitemplates-init:prod-090120110639",
+				"dr-harbor.docmagic.com/docsys/esign-service:1.38.1-f16f4fb-030822154322",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"esigndocument-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/esigndocument-service:1.4-b65612b-060721174209"
+			]
+		}
+	},
+	"esignpackage-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/esignpackage-service:1.9.0-0ceb96c-121421103958",
+				"dr-harbor.docmagic.com/docsys/softfont-init",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"esignparticipant-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/esignparticipant-service:1.9.0-8ad4848-031022124621",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"evault-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/evault-api:2.2.0-SNAPSHOT-20200917223208",
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"evault-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/evault-service:2.11.4-d65383e-020722142157",
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"fillmagic-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dsiconfig-init:fm1-030722184152",
+				"dr-harbor.docmagic.com/docsys/fillmagic-service:2.38.3-b876e8c-022422162902",
+				"dr-harbor.docmagic.com/library/dm-nginx:1.19.8-alpine"
+			]
+		}
+	},
+	"formanalyzer-cli": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"formanalyzer-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/formanalyzer-service:master-555626b-103020094446"
+			]
+		}
+	},
+	"formanalyzer-ui": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"formmetadata-service": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"fulfillment-service": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"fulfillmentgeneration-service": {
+		"docmagic-prod-austin": {
+			"images": []
+		}
+	},
+	"gfs-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/devops/gfs-purge-cronjob:master-712a035-030520220650",
+				"dr-harbor.docmagic.com/docsys/gfs-service:2.0.18-SNAPSHOT-84844-051320191320",
+				"harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"identity-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/identity-api:3.8.2-3fbe231-030922100847",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"identityverification-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/identityverification-service:1.2.2-3c43146-021822142819",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"lmconsole-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/lmconsole-ui:6.20-67c59a7-090321115651",
+				"harbor.docmagic.com/devops/config-init:master-91ea56d-062720021322"
+			]
+		}
+	},
+	"loanmagic-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/loanmagic-api:2.13.2-f89d40a-022822150641",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"loanmagic-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/loanmagic-service:6.16.1-1a6e8e0-010722175250"
+			]
+		}
+	},
+	"mersrelay-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/mersrelay-service:1.0.0-f5364e2-061421162725",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"nmls-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/nmls-service:1.3.0-369cf8d-010722093032",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"nmlsupdate-cli": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/nmlsupdate-cli:1.0-d22848d-100521134007"
+			]
+		}
+	},
+	"notarysupplier-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/notarysupplier-service:1.9.0-25624e9-030722133200",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"notification-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/notification-service:master-6bad6a6-011321145020",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"printmanager-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/printmanager-service:2.2-8e16398-090121135922",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"providerservices-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dsiconfig-init:app1-030722184013",
+				"dr-harbor.docmagic.com/docsys/dsitemplates-init:prod-061520153555",
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/docsys/providerservices-api:2.10.1-75f7652-020222115837",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"providerservices-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/providerservices-ui:master-ad736cf-062321101026",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"reporting-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/dsiconfig-init:fm1-051021200915",
+				"dr-harbor.docmagic.com/docsys/dsitemplates-init:fm1-020222180233",
+				"dr-harbor.docmagic.com/docsys/reporting-service:3.9.6-9291dc5-020122104141"
+			]
+		}
+	},
+	"setup-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/setup-service:master-d00037c-010621150146",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"signature-service": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/docsys/signature-service:1.16.1-aac9c7a-031022145152",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"signingview-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/signingview-ui:1.20.1-3917fcf-092921114355"
+			]
+		}
+	},
+	"signingview-ui-v3": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/devops/config-init:master-91ea56d-062720021322",
+				"dr-harbor.docmagic.com/docsys/signingview-ui-v3:signingview-3.20.5-e0003d1-031022125753"
+			]
+		}
+	},
+	"smartclose-ui": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/devops/config-init:master-91ea56d-062720021322",
+				"dr-harbor.docmagic.com/docsys/smartclose-ui:1.37.0-93269-022222144525",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	},
+	"smartregistry-api": {
+		"docmagic-prod-austin": {
+			"images": [
+				"dr-harbor.docmagic.com/docsys/keystore-init:20210810",
+				"dr-harbor.docmagic.com/docsys/smartregistry-api:2.4.1-fd59075-122821121029",
+				"dr-harbor.docmagic.com/library/dm-nginx:latest"
+			]
+		}
+	}
+}
